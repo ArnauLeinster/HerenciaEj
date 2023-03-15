@@ -1,6 +1,9 @@
 package ejercicio2;
-
-public class Serie {
+/**
+ * @author aitor
+ *
+ */
+public class Serie implements Entregable{
 	// CONSTANTES
 	static final int temp = 3;
 	static final boolean ent = false;
@@ -78,6 +81,28 @@ public class Serie {
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", numeroTemporadas=" + numeroTemporadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", creador=" + creador + "]";
+	}
+
+	@Override
+	public void entregar() {
+		entregado = true;
+		
+	}
+
+	@Override
+	public void devolver() {
+		entregado = false;
+		
+	}
+
+	@Override
+	public boolean isEntregado() {
+		return entregado;
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		
 	}
 
 }
