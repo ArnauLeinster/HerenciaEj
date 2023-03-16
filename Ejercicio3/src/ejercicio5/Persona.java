@@ -1,10 +1,9 @@
 package ejercicio5;
 
-public class Persona {
+public abstract class Persona {
 	String nombre;
 	double edad;
 	String sexo;
 
-	protected void novillo() {
-	}
+	protected abstract boolean novillo();
 }
