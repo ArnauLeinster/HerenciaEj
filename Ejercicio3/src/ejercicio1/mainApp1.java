@@ -21,6 +21,6 @@ public class mainApp1 {
 			System.out.println(tt2.getPrecioBase()+" "+tt2.getColor()+" "+tt2.getConsumoEnerg()+" "+tt2.getPeso());
 			System.out.println(tt3.getPrecioBase()+" "+tt3.getColor()+" "+tt3.getConsumoEnerg()+" "+tt3.getPeso());
 
-	}
 
+	}
 }
