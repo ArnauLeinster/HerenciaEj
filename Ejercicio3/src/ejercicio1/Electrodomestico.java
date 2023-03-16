@@ -68,8 +68,8 @@ public class Electrodomestico {
 		return cheker;
 	}
 
-	public int plusPrice() {
-		int finalPrice = (int) getPrecioBase();
+	public double plusPrice() {
+		double finalPrice = (int) getPrecioBase();
 		switch (getConsumoEnerg()) {
 		case 'a':
 			finalPrice = finalPrice + 100;
