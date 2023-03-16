@@ -102,7 +102,21 @@ public class Serie implements Entregable{
 
 	@Override
 	public void compareTo(Object a) {
-		
+				
+		if(this.getClass() == a.getClass()) {
+			
+			Serie serie = (Serie) a;
+			
+			if(this.getNumeroTemporadas() == serie.getNumeroTemporadas()) {
+				System.out.println("Las 2 series tienen el mismo numero de temporadas");
+			} else {
+				System.out.println("Las 2 series tienen temporadas diferentes");
+			}
+			
+		} else {
+			System.out.println("NO SE PUEDE COMPARAR");
+		}
+	
 	}
 
 }

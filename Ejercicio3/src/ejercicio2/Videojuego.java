@@ -4,7 +4,7 @@ package ejercicio2;
  * @author aitor
  *
  */
-public class Videojuego {
+public class Videojuego implements Entregable {
 	// CONSTANTES
 	static final int estimatedHour = 10;
 	static final boolean ent = false;
@@ -76,13 +76,44 @@ public class Videojuego {
 		this.compañia = compañia;
 	}
 
-	//METODOS
+	// METODOS
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", compañia=" + compañia + "]";
 	}
-	
-	
 
+	@Override
+	public void entregar() {
+		entregado = true;
+
+	}
+
+	@Override
+	public void devolver() {
+		entregado = false;
+
+	}
+
+	@Override
+	public boolean isEntregado() {
+		return entregado;
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		if (this.getClass() == a.getClass()) {
+
+			Videojuego videojuego = (Videojuego) a;
+
+			if (this.getHorasEstimadas() == videojuego.getHorasEstimadas()) {
+				System.out.println("Las 2 series tienen el mismo numero de temporadas");
+			} else {
+				System.out.println("Las 2 series tienen temporadas diferentes");
+			}
+
+		} else {
+			System.out.println("NO SE PUEDE COMPARAR");
+		}
+	}
 }
