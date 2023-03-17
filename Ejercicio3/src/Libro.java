@@ -6,7 +6,6 @@ public class Libro {
 	private int numPag=30;
 	
 	//getters y setters 
-	
 	public String getISBN() {
 		return ISBN;
 	}
