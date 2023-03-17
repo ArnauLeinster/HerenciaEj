@@ -1,8 +1,12 @@
 package ejercicio5;
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public class Profesor extends Persona {
 	String asignatura;
 
+	//Constructor with the data that we will be using in this java class
 	public Profesor(String nombre, double edad, String sexo, String asignatura) {
 		this.nombre = nombre;
 		this.edad = edad;
@@ -12,6 +16,7 @@ public class Profesor extends Persona {
 		this.presente = novillo();
 	}
 
+	//Sets whether the teacher is present or not
 	@Override
 	protected boolean novillo() {
 		// TODO Auto-generated method stub

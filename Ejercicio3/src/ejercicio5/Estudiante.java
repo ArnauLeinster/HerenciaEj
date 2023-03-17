@@ -1,5 +1,8 @@
 package ejercicio5;
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public class Estudiante extends Persona {
 	double nota;
 
@@ -12,6 +15,7 @@ public class Estudiante extends Persona {
 		this.presente = novillo();
 	}
 
+	//Checks whether each student is present or not
 	@Override
 	protected boolean novillo() {
 		// TODO Auto-generated method stub

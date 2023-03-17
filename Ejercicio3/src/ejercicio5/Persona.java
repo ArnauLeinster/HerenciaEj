@@ -1,5 +1,8 @@
 package ejercicio5;
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public abstract class Persona {
 	String nombre;
 	double edad;

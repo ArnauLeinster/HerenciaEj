@@ -1,5 +1,8 @@
 package ejercicio5;
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public class mainApp5 {
 
 	public static void main(String[] args) {
@@ -11,6 +14,7 @@ public class mainApp5 {
 		//adding the Estudiantes to the array
 		a.generarClase(clase);
 		
+		//Checking if the class can be done with our students and teacher
 		if (a.checkAula(clase, p)) {
 			
 			a.contarM(clase);

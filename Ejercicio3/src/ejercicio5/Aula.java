@@ -1,10 +1,14 @@
 package ejercicio5;
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public class Aula {
 	int id;
 	int nEstu;
 	String asignatura;
 
+	//Constructor with the data that we will be using in this java class
 	public Aula(int id, int nEstu, String asignatura) {
 
 		this.id = id;
@@ -13,24 +17,29 @@ public class Aula {
 
 	}
 
+	//this method checks to see if the class acn be completed
 	public boolean checkAula(Estudiante[] clase, Profesor p) {
 		boolean result = true;
 		int pres = 0;
 
+		//Checks to see whether the class and teacher subjects are the same
 		if (!(p.getAsignatura().equalsIgnoreCase(this.getAsignatura()))) {
 			result = false;
 		}
 
+		//Checks if the teacher is present
 		if (!(p.isPresente())) {
 			result = false;
 		}
 
+		//Counts the amount of present students
 		for (int i = 0; i < clase.length; i++) {
 			if (clase[i].isPresente()) {
 				pres++;
 			}
 		}
 
+		//Checks that the amount of students is higher than the minimum limit of the class
 		if ((this.getnEstu() / 2) > pres) {
 			result = false;
 		}
@@ -38,6 +47,7 @@ public class Aula {
 		return result;
 	}
 
+	//Counts the amount of passing students in the class
 	public void contarM(Estudiante[] clase) {
 		// TODO Auto-generated method stub
 		int h = 0;
@@ -58,6 +68,7 @@ public class Aula {
 
 	}
 	
+	//Generates the students while adding them to an array
 	public static void generarClase(Estudiante[] clase) {
 		Estudiante e0 = new Estudiante("Sandra", 9, "Mujer", 3);
 		Estudiante e1 = new Estudiante("Juan", 10, "Hombre", 7);
