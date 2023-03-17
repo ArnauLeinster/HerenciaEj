@@ -52,10 +52,9 @@ public class Aula {
 					}
 				}
 			}
-
-			System.out.println("la clase tiene " + h + "chicos aprobados");
-			System.out.println("la clase tiene " + m + "chicas aprobados");
 		}
+		System.out.println("la clase tiene " + h + "chicos aprobados");
+		System.out.println("la clase tiene " + m + "chicas aprobados");
 
 	}
 
