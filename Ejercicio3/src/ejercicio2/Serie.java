@@ -1,13 +1,13 @@
 package ejercicio2;
+
 /**
- * @author aitor
+ * @author aitor arnau marc
  *
  */
-public class Serie implements Entregable{
+public class Serie implements Entregable {
 	// CONSTANTES
 	static final int temp = 3;
 	static final boolean ent = false;
-
 	// ATRIBUTOS
 	private String titulo;
 	private int numeroTemporadas;
@@ -86,13 +86,13 @@ public class Serie implements Entregable{
 	@Override
 	public void entregar() {
 		entregado = true;
-		
+
 	}
 
 	@Override
 	public void devolver() {
 		entregado = false;
-		
+
 	}
 
 	@Override
@@ -102,21 +102,51 @@ public class Serie implements Entregable{
 
 	@Override
 	public void compareTo(Object a) {
-				
-		if(this.getClass() == a.getClass()) {
-			
+		if (this.getClass() == a.getClass()) {
 			Serie serie = (Serie) a;
-			
-			if(this.getNumeroTemporadas() == serie.getNumeroTemporadas()) {
+			if (this.getNumeroTemporadas() == serie.getNumeroTemporadas()) {
 				System.out.println("Las 2 series tienen el mismo numero de temporadas");
 			} else {
 				System.out.println("Las 2 series tienen temporadas diferentes");
 			}
-			
 		} else {
 			System.out.println("NO SE PUEDE COMPARAR");
 		}
-	
 	}
 
+	@Override
+	public Object generador() {
+		Serie serie[] = new Serie[5];
+		for (int i = 0; i < serie.length; i++) {
+			Serie s = new Serie("Titulo" + i, i, "Comedia" + i, "Creador" + i);
+			serie[i] = s;
+		}
+		return serie;
+	}
+
+	// CONTADOR ENTREGADOS
+	public void entregados(Object a) {
+		int contador = 0;
+		if (a.getClass() == Serie[].class) {
+			Serie serie[] = (Serie[]) a;
+			for (int i = 0; i < serie.length; i++) {
+				if (serie[i].isEntregado()) {
+					contador++;
+					System.out.println("La serie: " + serie[i].getTitulo() + " ha sido ENTREGADA");
+				}
+			}
+			System.out.println("En total se han entregado " + contador + " peliculas");
+		}
+	}
+
+	// VERIFICAR TEMPORADAS ESTIMADA
+	public void maxTemporadasSeries(Serie series[]) {
+		int pos = 0;
+		for (int i = 0; i < series.length; i++) {
+			if (series[pos].getNumeroTemporadas() < series[i].getNumeroTemporadas()) {
+				pos = i;
+			}
+		}
+		System.out.println(series[pos].toString());
+	}
 }

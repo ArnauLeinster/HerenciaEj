@@ -1,7 +1,7 @@
 package ejercicio2;
 
 /**
- * @author aitor
+ * @author aitor arnau marc
  *
  */
 public class Videojuego implements Entregable {
@@ -115,5 +115,42 @@ public class Videojuego implements Entregable {
 		} else {
 			System.out.println("NO SE PUEDE COMPARAR");
 		}
+	}
+
+	// GENERADOR DE LISTA DE VIDEOJUEGOS
+	@Override
+	public Object generador() {
+		Videojuego videojuego[] = new Videojuego[5];
+		for (int i = 0; i < videojuego.length; i++) {
+			Videojuego v = new Videojuego("Titulo" + i, i, "Comedia" + i, "Creador" + i);
+			videojuego[i] = v;
+		}
+		return videojuego;
+	}
+
+	// CONTADOR ENTREGADOS
+	public void entregados(Object a) {
+		int contador = 0;
+		if (a.getClass() == Videojuego[].class) {
+			Videojuego videojuego[] = (Videojuego[]) a;
+			for (int i = 0; i < videojuego.length; i++) {
+				if (videojuego[i].isEntregado()) {
+					contador++;
+					System.out.println("El videojuego: " + videojuego[i].getTitulo() + " ha sido ENTREGADO");
+				}
+			}
+			System.out.println("En total se han entregado " + contador + " videojuegos");
+		}
+	}
+
+	// VERIFICAR HORAS ESTIMADAS
+	public void maxHorasEstimadasVideojuegos(Videojuego videojuegos[]) {
+		int pos = 0;
+		for (int i = 0; i < videojuegos.length; i++) {
+			if (videojuegos[pos].getHorasEstimadas() < videojuegos[i].getHorasEstimadas()) {
+				pos = i;
+			}
+		}
+		System.out.println(videojuegos[pos].toString());
 	}
 }

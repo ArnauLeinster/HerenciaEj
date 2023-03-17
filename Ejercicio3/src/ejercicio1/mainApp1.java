@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * @author aitor
+ * @author aitor arnau marc
  *
  */
 public class mainApp1 {
@@ -20,7 +20,9 @@ public class mainApp1 {
 			ArrayList<Electrodomestico> compraEle= createArray();
 			seePrice(compraEle);
 			
+			
 	}
+	
 	public static ArrayList<Electrodomestico> createArray()
 	{
 		ArrayList<Electrodomestico> list= new ArrayList<Electrodomestico>();
@@ -38,6 +40,7 @@ public class mainApp1 {
 		return list;
 		
 	}
+	
 	public static void seePrice(ArrayList<Electrodomestico> eleArr)
 	{
 		double precioEle=0;
