@@ -38,6 +38,27 @@ public class Aula {
 		return result;
 	}
 
+	public void contarM(Estudiante[] clase) {
+		// TODO Auto-generated method stub
+		int h = 0;
+		int m = 0;
+		for (int i = 0; i < clase.length; i++) {
+			if (clase[i].isPresente()) {
+				if (clase[i].getNota() >= 5) {
+					if (clase[i].getSexo().equalsIgnoreCase("Hombre")) {
+						h++;
+					} else {
+						m++;
+					}
+				}
+			}
+
+			System.out.println("la clase tiene " + h + "chicos aprobados");
+			System.out.println("la clase tiene " + m + "chicas aprobados");
+		}
+
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -60,25 +81,6 @@ public class Aula {
 
 	public void setAsignatura(String asignatura) {
 		this.asignatura = asignatura;
-	}
-
-	public void contarM(Estudiante[] clase) {
-		// TODO Auto-generated method stub
-		int h = 0;
-		int m = 0;
-		for (int i = 0; i < clase.length; i++) {
-			if (clase[i].getNota() >= 5) {
-				if (clase[i].getSexo().equalsIgnoreCase("Hombre")) {
-					h++;
-				} else {
-					m++;
-				}
-			}
-		}
-
-		System.out.println("la clase tiene " + h + "chicos aprobados");
-		System.out.println("la clase tiene " + m + "chicas aprobados");
-
 	}
 
 }
