@@ -18,17 +18,22 @@ public class mainApp2 {
 		System.out.println("EJERCICIO 2 - SERIES y VIDEOJUEGOS");
 		Serie series[] = new Serie[5];
 		Videojuego videojuegos[] = new Videojuego[5];
+		
 		// GENERAR SERIES - VIDEOJUEGOS
 		generarSeriesVideojuegos(series, videojuegos);
+		
 		// ENTREGAR ALGUNOS VIDEOJUEGOS-SERIES
 		for (int i = 0; i < series.length; i += 2) {
 			series[i].entregar();
 			videojuegos[i].entregar();
 		}
+		
 		// CONTAR ENTREGADOS
 		entregados(series, videojuegos);
+		
 		System.out.println("MAX HORAS VIDEOJUEGOS");
 		maxHorasEstimadasVideojuegos(videojuegos);
+		
 		System.out.println("MAX TEMPORADAS SERIES");
 		maxTemporadasSeries(series);
 
