@@ -32,7 +32,7 @@ public class Libro {
 		this.numPag = numPag;
 	}
 	
-	//default constructor
+	
 	public Libro()
 	{
 		this.ISBN="1340901217";

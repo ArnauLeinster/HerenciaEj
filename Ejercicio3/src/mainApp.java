@@ -15,11 +15,11 @@ public class mainApp {
 	{
 		if(l1.getNumPag()>l2.getNumPag())
 		{
-			System.out.println("El libro"+l1.getTitulo()+" tiene más paginas que "+l2.getTitulo());
+			System.out.println("El libro "+l1.getTitulo()+" tiene más paginas que "+l2.getTitulo());
 		}
 		else if(l1.getNumPag()<l2.getNumPag())
 		{
-			System.out.println("El libro"+l2.getTitulo()+"tiene más paginas que "+l1.getTitulo());
+			System.out.println("El libro "+l2.getTitulo()+"tiene más paginas que "+l1.getTitulo());
 		}
 		else
 			System.out.println("Tienen la misma cantidad de paginas los 2 libros");
