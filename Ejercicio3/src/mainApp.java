@@ -1,5 +1,6 @@
 
 public class mainApp {
+	//main class
 	public static void main(String[] args) {
 		 Libro l1=new Libro("1234567890");
 		 Libro l2=new Libro("Pedro","No hay Mundo",10);
@@ -8,6 +9,8 @@ public class mainApp {
 		 morePages(l1,l2);
 		 
 	}
+	
+	//check how many pages it have
 	public static void morePages(Libro l1,Libro l2) 
 	{
 		if(l1.getNumPag()>l2.getNumPag())
