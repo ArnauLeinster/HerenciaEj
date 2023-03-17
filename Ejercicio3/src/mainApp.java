@@ -1,14 +1,18 @@
-
+/**
+ * @author aitor arnau marc
+ *
+ */
 public class mainApp {
-	//main class
+	
 	public static void main(String[] args) {
+		
 		 Libro l1=new Libro("1234567890");
 		 Libro l2=new Libro("Pedro","No hay Mundo",10);
 		 System.out.println(l1.toString());
 		 System.out.println(l2.toString());
-		 morePages(l1,l2);
-		 
+		 morePages(l1,l2);	 
 	}
+	
 	
 	//check how many pages it have
 	public static void morePages(Libro l1,Libro l2) 
